@@ -1,0 +1,308 @@
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 120px 24px 80px;
+  background: #0b1020;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Subtle Background Glow */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 193, 7, 0.07) 0%,
+    rgba(26, 35, 126, 0.08) 35%,
+    transparent 70%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Hero Content */
+
+.hero-content {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  animation: heroFadeIn 0.9s ease both;
+}
+
+/* Greeting */
+
+.hero-greeting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  color: #ffc107;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+/* Availability Dot */
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ffc107;
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.5);
+}
+
+/* Name */
+
+.hero-name {
+  margin: 0;
+  font-size: clamp(64px, 11vw, 112px);
+  font-weight: 800;
+  letter-spacing: -6px;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.hero-name span {
+  color: #ffc107;
+}
+
+/* Professional Title */
+
+.hero-title {
+  margin-top: 24px;
+  margin-bottom: 22px;
+  font-size: clamp(25px, 4vw, 40px);
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #dce2f0;
+}
+
+/* Description */
+
+.hero-description {
+  max-width: 590px;
+  margin: 0 auto;
+  color: #a8b0c5;
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+/* Buttons */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 38px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-btn span {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Primary Button */
+
+.hero-btn-primary {
+  background: #ffc107;
+  color: #0b1020;
+  border-color: #ffc107;
+}
+
+.hero-btn-primary:hover {
+  background: #ffd54f;
+  border-color: #ffd54f;
+  transform: translateY(-3px);
+}
+
+.hero-btn-primary:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* Secondary Button */
+
+.hero-btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: #394158;
+}
+
+.hero-btn-secondary:hover {
+  color: #ffc107;
+  border-color: #ffc107;
+  transform: translateY(-3px);
+}
+
+/* Scroll Indicator */
+
+.hero-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 75px;
+  color: #78839d;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.scroll-line {
+  display: inline-block;
+  width: 35px;
+  height: 1px;
+  background: #ffc107;
+}
+
+/* Background Decorations */
+
+.hero-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+}
+
+.hero-decoration-one {
+  width: 360px;
+  height: 360px;
+  top: -200px;
+  right: -100px;
+}
+
+.hero-decoration-two {
+  width: 280px;
+  height: 280px;
+  bottom: -180px;
+  left: -100px;
+}
+
+/* Entrance Animation */
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content {
+    animation: none;
+  }
+
+  .hero-btn,
+  .hero-btn span {
+    transition: none;
+  }
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 110px 22px 55px;
+  }
+
+  .hero-greeting {
+    margin-bottom: 24px;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .hero-name {
+    font-size: clamp(58px, 15vw, 82px);
+    letter-spacing: -3px;
+  }
+
+  .hero-title {
+    margin-top: 20px;
+    margin-bottom: 18px;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .hero-btn {
+    min-height: 46px;
+    padding: 0 17px;
+    font-size: 12px;
+  }
+
+  .hero-scroll {
+    margin-top: 55px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .hero-decoration-one {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-decoration-two {
+    width: 200px;
+    height: 200px;
+  }
+}

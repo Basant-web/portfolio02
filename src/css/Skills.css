@@ -1,0 +1,123 @@
+/* Skills Section */
+
+.skills-section {
+  padding: 100px 8%;
+  background: #0b1020;
+  color: #ffffff;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  color: #ffc107;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.skills-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.skills-title span {
+  color: #ffc107;
+}
+
+.skills-description {
+  color: #a8b0c5;
+  font-size: 15px;
+  margin-bottom: 45px;
+  line-height: 1.8;
+}
+
+/* Category Layout */
+
+.skill-categories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.skill-category-card {
+  padding: 30px;
+  background: #10172a;
+  border: 1px solid #252d42;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.skill-category-card:hover {
+  border-color: #ffc107;
+  transform: translateY(-5px);
+}
+
+.skill-category-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.category-description {
+  color: #a8b0c5;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* Technology List */
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.technology-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #192238;
+  border: 1px solid #2a344c;
+  border-radius: 7px;
+  color: #e5e7eb;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.technology-item:hover {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+.technology-icon {
+  font-size: 17px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1000px) {
+  .skill-categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .skills-section {
+    padding: 75px 6%;
+  }
+
+  .skill-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category-card {
+    padding: 24px;
+  }
+}

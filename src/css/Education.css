@@ -1,0 +1,122 @@
+/* Education Section */
+
+.education-section {
+  padding: 100px 8%;
+  background: #0b1020;
+  color: #ffffff;
+}
+
+.education-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.education-title {
+  font-size: clamp(34px, 5vw, 50px);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.education-title span {
+  color: #ffc107;
+}
+
+.education-description {
+  color: #a8b0c5;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 45px;
+}
+
+/* Education Cards */
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.education-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 30px;
+  background: #10172a;
+  border: 1px solid #252d42;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: #ffc107;
+  transform: translateX(5px);
+}
+
+/* Number Marker */
+
+.education-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.25);
+  border-radius: 8px;
+  color: #ffc107;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Education Content */
+
+.education-status {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #ffc107;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.education-content h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.education-specialization {
+  margin-bottom: 8px;
+  color: #e0e5f0;
+  font-size: 14px;
+}
+
+.education-institution {
+  color: #a8b0c5;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .education-section {
+    padding: 80px 6%;
+  }
+
+  .education-card {
+    gap: 16px;
+    padding: 22px 18px;
+  }
+
+  .education-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .education-content h3 {
+    font-size: 18px;
+  }
+}
