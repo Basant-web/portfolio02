@@ -8,9 +8,9 @@ const education = [
     status: "Currently Pursuing",
   },
   {
-    degree: "Bachelor of Commerce (B.Com.)",
-    specialization: "Commerce",
-    institution: "Add Your College Name",
+    degree: "Bachelor of Science (B.Sc.)",
+    specialization: "Science",
+    institution: "shri r k parikh arts & science college",
     status: "Completed",
   },
 ];
