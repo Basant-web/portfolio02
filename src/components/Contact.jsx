@@ -17,15 +17,15 @@ function Contact() {
         </p>
 
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:yadavbasant2800@gmail.com"
           className="contact-email"
         >
-          your.email@example.com <span>↗</span>
+          yadavbasant2800@gmail.com <span>↗</span>
         </a>
 
         <div className="contact-socials">
           <a
-            href="https://github.com/YOUR_USERNAME"
+            href="https://github.com/Basant-web"
             target="_blank"
             rel="noopener noreferrer"
           >

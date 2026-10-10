@@ -49,7 +49,7 @@ function Footer() {
             LinkedIn ↗
           </a>
 
-          <a href="mailto:your.email@example.com">
+          <a href="mailto:yadavbasant2800@gmail.com">
             Email ↗
           </a>
         </div>
